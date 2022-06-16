@@ -6,7 +6,9 @@ const schema = new Schema({
     id: { type: Number, default: false },
     comments: [{
         id: Number,
-        date: String,
+        date: Number,
+        name: String,
+        comment: String,
         text: String,
     }]
 })
