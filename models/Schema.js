@@ -1,16 +1,16 @@
-const { Schema, model } = require('mongoose')
+import mongoose from 'mongoose'
 
-const schema = new Schema({
-    url: { type: String, required: true },
-    fullUrl: { type: String, required: true },
-    id: { type: Number, default: false },
-    comments: [{
-        id: Number,
-        date: Number,
-        name: String,
-        comment: String,
-        text: String,
-    }]
+const schema = new mongoose.Schema({
+  url: { type: String, required: true },
+  fullUrl: { type: String, required: true },
+  id: { type: Number, default: false },
+  comments: [{
+    id: Number,
+    date: Number,
+    name: String,
+    comment: String,
+    text: String,
+  }]
 })
 
-module.exports = model('image', schema)
+export default mongoose.model('image', schema)
