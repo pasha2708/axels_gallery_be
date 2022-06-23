@@ -7,8 +7,7 @@ const schema = new mongoose.Schema({
   comments: [{
     id: Number,
     date: Number,
-    name: String,
-    comment: String,
+    author: String,
     text: String,
   }]
 })
