@@ -15,8 +15,7 @@ app.use(router)
 
 async function start() {
   try {
-    await mongoose.connect(
-      'mongodb+srv://pasha:KR7cB9Mr3ehRk7jy@cluster0.e2wkx.mongodb.net/?retryWrites=true&w=majority')
+    await mongoose.connect(process.env.DATABASE_URL)
     app.listen(PORT, () => {
       console.log(`Server has been started on port ${PORT}`)
     })

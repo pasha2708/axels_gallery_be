@@ -37,4 +37,12 @@ router.delete('/images/:id/comments/:commentId', async (req, res) => {
   res.send(picture)
 })
 
+// router.put('/images/:id/comments/:commentId', async (req, res) => {
+//   const data = await Pictures.findOne({ id: req.params.id })
+//   data.comments = data.comments.filter((e) => e.id != req.params.commentId)
+//   await Pictures.findOneAndUpdate({ id: req.params.id }, data)
+//   const picture = await Pictures.findOne({ id: req.params.id })
+//   res.send(picture)
+// })
+
 export default router
