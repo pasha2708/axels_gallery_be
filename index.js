@@ -5,6 +5,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 
 const PORT = process.env.PORT || 5000
+const DATABASE_URL = process.env.DATABASE_URL
 
 const app = express()
 
@@ -15,7 +16,7 @@ app.use(router)
 
 async function start() {
   try {
-    await mongoose.connect(process.env.DATABASE_URL)
+    await mongoose.connect(DATABASE_URL)
     app.listen(PORT, () => {
       console.log(`Server has been started on port ${PORT}`)
     })
